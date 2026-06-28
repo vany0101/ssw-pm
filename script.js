@@ -126,7 +126,7 @@ const flashcardDataset = [
 ];
 
 const examDataset = [
-    // SESI 1: 30 SOAL TEORI (INFORMASI & PENGETAHUAN)
+    // SESI 1: 60 SOAL TEORI (INFORMASI & PENGETAHUAN)
     { 
         type: "teori", 
         q: "HACCPの7<ruby>原則<rt>げんそく</rt></ruby>において、<ruby>最初<rt>さいしょ</rt></ruby>に行う<ruby>手順<rt>てじゅん</rt></ruby>（<ruby>原則<rt>げんそく</rt></ruby>1）は何ですか。", 
@@ -307,8 +307,189 @@ const examDataset = [
         ans: "すぐに機械を止め、大声で管理者に報告する", 
         opts: ["怒られるのが怖いので隠す", "すぐに機械を止め、大声で管理者に報告する", "仕事を最後まで終わらせてから病院に行く"] 
     },
-    
-    // SESI 2: 10 SOAL PRAKTIK (DENGAN ILUSTRASI GAMBAR)
+    { 
+        type: "teori", 
+        q: "すべての<ruby>製造業<rt>せいぞうぎょう</rt></ruby>のなかで、<ruby>未熟練<rt>みじゅくれん</rt></ruby><ruby>作業者<rt>さぎょうしゃ</rt></ruby>（<ruby>経験<rt>けいけん</rt></ruby>が3<ruby>年<rt>ねん</rt></ruby><ruby>未満<rt>みまん</rt></ruby>）の<ruby>死傷<rt>ししょう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>が最も多いのはどの<ruby>業種<rt>ぎょうしゅ</rt></ruby>ですか。", 
+        ans: "食料品製造業", 
+        opts: ["機械器具製造業", "食料品製造業", "化学工業"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>食品<rt>しょくひん</rt></ruby><ruby>製造<rt>せいぞう</rt></ruby><ruby>工場<rt>こうじょう</rt></ruby>で起きる<ruby>労働<rt>ろうどう</rt></ruby><ruby>災害<rt>さいがい</rt></ruby>のうち、<ruby>件数<rt>けんすう</rt></ruby>が最も多い上位3つ（全体の約60%）の正しい組み合わせはどれですか。", 
+        ans: "①転倒、②はさまれ・巻き込まれ、③切れ・こすれ", 
+        opts: ["①転倒、②はさまれ・巻き込まれ、③切れ・こすれ", "①墜落、②やけど、③熱中症", "①激突、②腰痛、③感電"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>食品<rt>しょくひん</rt></ruby><ruby>衛生<rt>えいせい</rt></ruby>の<ruby>基本<rt>きほん</rt></ruby>となる「どんな食品を作るときも共通しておこなう<ruby>基本的<rt>きほんてき</rt></ruby>な<ruby>衛生<rt>えいせい</rt></ruby><ruby>管理<rt>かんり</rt></ruby>」を何と言いますか。", 
+        ans: "一般衛生管理", 
+        opts: ["HACCPプラン", "特定原材料管理", "一般衛生管理"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>異物<rt>いぶつ</rt></ruby>のなかで、<ruby>金属<rt>きんぞく</rt></ruby>片、ガラス片、<ruby>石<rt>いし</rt></ruby>のように硬いものを何と言いますか。", 
+        ans: "硬質異物", 
+        opts: ["軟質異物", "硬質異物", "生物ハザード"] 
+    },
+    { 
+        type: "teori", 
+        q: "カビや<ruby>虫<rt>むし</rt></ruby>、<ruby>髪の毛<rt>かみのけ</rt></ruby>などの<ruby>硬く<rt>かたく</rt></ruby>ない<ruby>異物<rt>いぶつ</rt></ruby>が食品に入った場合、どのような問題につながりますか。", 
+        ans: "苦情（クレーム）や返品になり、会社の信用を落とす", 
+        opts: ["口の中やのどに傷を作る", "毒素が発生して人が死ぬ", "苦情（クレーム）や返品になり、会社の信用を落とす"] 
+    },
+    { 
+        type: "teori", 
+        q: "2024<ruby>年<rt>ねん</rt></ruby>3<ruby>月<rt>がつ</rt></ruby>の<ruby>法律<rt>ほうりつ</rt></ruby><ruby>改正<rt>かいせい</rt></ruby>により、<ruby>特定<rt>tくてい</rt></ruby><ruby>原材料<rt>げんざいりょう</rt></ruby>（<ruby>表示<rt>ひょうじ</rt></ruby><ruby>義務<rt>ぎむ</rt></ruby>）は<ruby>何<rt>なん</rt></ruby>品目になりましたか。", 
+        ans: "8品目", 
+        opts: ["7品目", "8品目", "20品目"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>特定<rt>とくてい</rt></ruby><ruby>原材料<rt>げんざいりょう</rt></ruby>に「<ruby>準ずる<rt>じゅんずる</rt></ruby>もの」（<ruby>表示<rt>ひょうじ</rt></ruby><ruby>推奨<rt>すいしょう</rt></ruby>）として、新しく<ruby>追加<rt>ついか</rt></ruby>された品目はどれですか。", 
+        ans: "マカダミアナッツ", 
+        opts: ["まつたけ", "大豆", "マカダミアナッツ"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>冷蔵<rt>れいぞう</rt></ruby>管理が必要な<ruby>食肉<rt>しょくにく</rt></ruby>の<ruby>一般的<rt>いっぱんてき</rt></ruby>な<ruby>保管<rt>ほかん</rt></ruby><ruby>温度<rt>おんど</rt></ruby>として、<ruby>食品<rt>しょくひん</rt></ruby><ruby>衛生<rt>えいせい</rt></ruby><ruby>法<rt>ほう</rt></ruby>で決められているものはどれですか。", 
+        ans: "10℃以下", 
+        opts: ["10℃以下", "15℃以下", "-15℃以下"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>冷凍<rt>れいとう</rt></ruby>庫の<ruby>温度<rt>おんど</rt></ruby>として、<ruby>食品<rt>しょくひん</rt></ruby><ruby>衛生<rt>えいせい</rt></ruby><ruby>法<rt>ほう</rt></ruby>で決められている<ruby>基準<rt>きじゅん</rt></ruby>はどれですか。", 
+        ans: "-15℃以下", 
+        opts: ["0℃以下", "-15℃以下", "-18℃以下"] 
+    },
+    { 
+        type: "teori", 
+        q: "マグロやサバなどの<ruby>赤身<rt>あかみ</rt></ruby>魚を悪い条件で保存すると増える、アレルギーによく似た<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>の原因物質は何ですか。", 
+        ans: "ヒスタミン", 
+        opts: ["ソラニン", "ヒスタミン", "エンテロトキシン"] 
+    },
+    { 
+        type: "teori", 
+        q: "「加熱しても死なない<ruby>殻<rt>から</rt></ruby>を被った細菌の<ruby>種<rt>たね</rt></ruby>のようなもの」を何と言いますか。", 
+        ans: "芽胞（がほう）", 
+        opts: ["芽胞（がほう）", "ウイルス", "毒素"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>加熱<rt>かねつ</rt></ruby><ruby>調理<rt>ちょうり</rt></ruby>のあと、食品がゆっくり冷える間に増えやすい、カレーやシチューなどで発生する<ruby>芽胞<rt>がほう</rt></ruby>菌はどれですか。", 
+        ans: "ウェルシュ菌", 
+        opts: ["サルモネラ属菌", "黄色ブドウ球菌", "ウェルシュ菌"] 
+    },
+    { 
+        type: "teori", 
+        q: "ノロウイルスを<ruby>加熱<rt>かねつ</rt></ruby>でやっつける（殺す）ための正しい<ruby>中心<rt>ちゅうしん</rt></ruby><ruby>温度<rt>おんど</rt></ruby>と時間の条件はどれですか。", 
+        ans: "85℃〜90℃で90秒間以上", 
+        opts: ["75℃で1分間以上", "85℃〜90℃で90秒間以上", "120℃で4分間以上"] 
+    },
+    { 
+        type: "teori", 
+        q: "ノロウイルスによる<ruby>食中毒<rt>しょくちゅうどく</rt></ruby>を<ruby>予防<rt>よぼう</rt></ruby>するための「4<ruby>原則<rt>げんそく</rt></ruby>」の正しい組み合わせはどれですか。", 
+        ans: "①持ち込まない、②つけない、③やっつける、④拡げない", 
+        opts: ["①持ち込まない、②つけない、③やっつける、④拡げない", "①つけない、②増やさない、③やっつける", "①整理、②整頓、③清掃、④清潔"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>加熱<rt>かねつ</rt></ruby>が終わってから細菌の増殖を防ぐためにおこなう、<ruby>具体的<rt>ぐたいてき</rt></ruby>な<ruby>冷却<rt>れいきゃく</rt></ruby>条件として正しいものはどれですか。", 
+        ans: "30分間以内に中心温度を20℃まで下げる（または60分間以内に10℃まで下げる）", 
+        opts: ["2時間以内に中心温度を10℃まで下げる", "30分間以内に中心温度を20℃まで下げる（または60分間以内に10℃まで下げる）", "室温で自然に冷めるまで放置する"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>加熱<rt>かねつ</rt></ruby>しない野菜サラダなどを<ruby>薬剤<rt>やくざい</rt></ruby>で殺菌する場合、次亜塩素酸ナトリウム溶液の濃度200ppmでの処理時間は何分ですか。", 
+        ans: "5分間", 
+        opts: ["1分間", "5分間", "10分間"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>金属<rt>きんぞく</rt></ruby><ruby>探知<rt>たんち</rt></ruby>機の管理において、金属を正しく探知できているか確認するために使う道具を何と言いますか。", 
+        ans: "テストピース", 
+        opts: ["テストピース", "安全カバー", "インナーネット"] 
+    },
+    { 
+        type: "teori", 
+        q: "石やガラスなど、金属探知機では見つけることができない硬質異物を検出するために使われる機械は何ですか。", 
+        ans: "X線異物検出機", 
+        opts: ["金属探知機", "X線異物検出機", "エアータオル"] 
+    },
+    { 
+        type: "teori", 
+        q: "1つの大きな<ruby>労働<rt>ろうどう</rt></ruby><ruby>災害<rt>さいがい</rt></ruby>が起こる背景には、300件のヒヤリ・ハットが隠れているという法則を何と言いますか。", 
+        ans: "ハインリッヒの法則", 
+        opts: ["HACCPの原則", "ハインリッヒの法則", "5Sの法則"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>作業<rt>さぎょう</rt></ruby>の手順や機械のスイッチを入れる前に、危険を予防するために指をさして声に出して確認することを何と言いますか。", 
+        ans: "指差呼称（しさこしょう）", 
+        opts: ["5S活動", "危険予知訓練（KYT）", "指差呼称（しさこしょう）"] 
+    },
+    { 
+        type: "teori", 
+        q: "部品が壊れたり、製品がつまったりしたときに、機械が自動的に止まる安全装置の仕組みを何と言いますか。", 
+        ans: "フェールセーフ", 
+        opts: ["フェールセーフ", "フールプルーフ", "ゾーニング"] 
+    },
+    { 
+        type: "teori", 
+        q: "間違って機械に手を入れてしまわないための安全カバーのように、人がうっかりミスをしても災害にならない仕組みを何と言いますか。", 
+        ans: "フールプルーフ", 
+        opts: ["フェールセーフ", "フールプルーフ", "ハザード分析"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>塩素<rt>えんそ</rt></ruby>系の洗剤と、ある洗剤を混ぜて同時に使うと有害な塩素ガスが発生して大変危険です。混ぜてはいけない洗剤はどれですか。", 
+        ans: "酸性洗剤", 
+        opts: ["アルカリ性洗剤", "中性洗剤", "酸性洗剤"] 
+    },
+    { 
+        type: "teori", 
+        q: "温度や濃度、時間はいつ記録しなければいけませんか。", 
+        ans: "はかったとき、確認したときにすぐ記録する", 
+        opts: ["一日の仕事が終わったあとにまとめて記録する", "はかる前にあらかじめ記録しておく", "はかったとき、確認したときにすぐ記録する"] 
+    },
+    { 
+        type: "teori", 
+        q: "食品工場の中が「清潔作業区域」「準清潔作業区域」「汚染作業区域」などに分かれている衛生管理（ゾーニング）を何と言いますか。", 
+        ans: "区分衛生管理", 
+        opts: ["区分衛生管理", "重要管理点", "ハインリッヒ管理"] 
+    },
+    { 
+        type: "teori", 
+        q: "アレルギー物質を含む食品を同じ設備で製造する場合、混入を防ぐための最も適切な製造計画はどれですか。", 
+        ans: "アレルギー物質を含む食品は、一日の終わりに製造してその後に丁寧に洗浄する", 
+        opts: ["一日の最初に製造し、そのまま次の製品を作る", "アレルギー物質を含む食品は、一日の終わりに製造してその後に丁寧に洗浄する", "機械を洗わずにスピードを優先して製造する"] 
+    },
+    { 
+        type: "teori", 
+        q: "未開封の加工食品を決められた条件で保存した場合に、「美味しく食べられる期間の最後の日」を何と言いますか。", 
+        ans: "賞味期限", 
+        opts: ["使用期限", "消費期限", "賞味期限"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>消費<rt>しょうひ</rt></ruby><ruby>期限<rt>きげん</rt></ruby>を過ぎた原材料を使ってはいけない最も大きな理由は何ですか。", 
+        ans: "食中毒の原因になる可能性が高くなり安全ではないから", 
+        opts: ["味が少し薄くなるから", "食中毒の原因になる可能性が高くなり安全ではないから", "値段が安くなるから"] 
+    },
+    { 
+        type: "teori", 
+        q: "ケガをした人や倒れている人を見つけたとき（労働災害発生時）、二次災害を防ぐために最初に取るべき正しい行動はどれですか。", 
+        ans: "あわてて近づかず、何が起こっているかを確認して大声で周りや責任者に知らせる", 
+        opts: ["すぐに一人で駆け寄って抱き起こす", "あわてて近づかず、何が起こっているかを確認して大声で周りや責任者に知らせる", "気づかないふりをして自分の作業を続ける"] 
+    },
+    { 
+        type: "teori", 
+        q: "<ruby>作業場<rt>さぎょうじょう</rt></ruby>にホチキスの針やクリップ、シャープペンシルを持ち込んではいけない理由は何ですか。", 
+        ans: "折れた芯や針が製品に入ると、異物混入の原因になるから", 
+        opts: ["作業のスピードが遅くなるから", "工場の電気が消えてしまうから", "折れた芯や針が製品に入ると、異物混入の原因になるから"] 
+    },
+
+    // SESI 2: 20 SOAL PRAKTIK (DENGAN ILUSTRASI GAMBAR)
+
     { 
         type: "praktik", 
         img_src: "ilustrasi-soal-praktik-1.png", 
@@ -378,6 +559,76 @@ const examDataset = [
         q: "このイラストのような状態のままだと、火災や地震などの<ruby>緊急<rt>きんきゅう</rt></ruby>時にどのような問題が起きますか。", 
         ans: "避難（ひなん）が遅れ、逃げ遅れて命の危険が生じる", 
         opts: ["荷物が濡れてしまう", "避難（ひなん）が遅れ、逃げ遅れて命の危険が生じる", "泥棒に入られやすくなる"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-11.png", 
+        q: "<ruby>排水<rt>はいすい</rt></ruby>溝や大きな機械の下を清掃するときの注意点として、正しいものはどれですか。", 
+        ans: "排水溝は蓋を外してしっかり洗い、床に微生物が増えないよう濡れたままにしない", 
+        opts: ["水を流すだけで蓋は外さなくてよい", "排水溝は蓋を外してしっかり洗い、床に微生物が増えないよう濡れたままにしない", "作業を早く終わらせるために床を濡らしたままにする"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-12.png", 
+        q: "イラストのように箱を重ねて運ぶとき、<ruby>転倒<rt>てんとう</rt></ruby>災害を防ぐための正しいルールはどれですか。", 
+        ans: "前が見える（足元が確認できる）数の箱を持って運ぶ", 
+        opts: ["一回で多く運ぶためにできるだけ高く積み上げる", "前が見える（足元が確認できる）数の箱を持って運ぶ", "走りながら素早く運ぶ"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-13.png", 
+        q: "このイラストのように、機械に製品がつまって止まった（ように見える）ときの正しい対応はどれですか。", 
+        ans: "必ず停止ボタンを押し、機械が完全に止まったことを確認してからトラブルを取り除く", 
+        opts: ["動く力が遅いので、そのまま手を入れて製品を取り除く", "必ず停止ボタンを押し、機械が完全に止まったことを確認してからトラブルを取り除く", "カバーを開けたまま別のスイッチを入れる"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-14.png", 
+        q: "冷凍した魚や硬い野菜を切る作業での「切れ・こすれ」災害を防ぐために、着用すべき安全保護具はどれですか。", 
+        ans: "耐切創手袋（切れ防止用の保護手袋）", 
+        opts: ["薄手のビニール手袋", "耐切創手袋（切れ防止用の保護手袋）", "手袋は何もつけなくてよい"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-15.png", 
+        q: "イラストのように脚立（きゃたつ）を使って作業するとき、墜落・転落を防ぐための正しい使い方はどれですか。", 
+        ans: "必ず「開き止め金具」をセットして使い、乗り降りは片手を空けて脚立をつかむ", 
+        opts: ["「開き止め金具」はセットしなくてもバランスを取ればよい", "必ず「開き止め金具」をセットして使い、乗り降りは片手を空けて脚立をつかむ", "荷物を両手に持ったまま勢いよく飛び降りる"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-16.png", 
+        q: "オーブンの鉄板や鍋、釜を運ぶときの「やけど」災害対策として、正しい行動はどれですか。", 
+        ans: "必ず保護手袋を着用し、運ぶ前に周囲の人へ「高温注意」の声をかける", 
+        opts: ["素手で触って熱さを確かめてから運ぶ", "必ず保護手袋を着用し、運ぶ前に周囲の人へ「高温注意」の声をかける", "冷めるまで2時間機械の中に放置する"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-17.png", 
+        q: "<ruby>消毒<rt>しょうどく</rt></ruby>用アルコールの置き場所として、イラストのどこが危険（火災の原因）ですか。", 
+        ans: "オーブンなど高温になる機械の近くに置くと、アルコールに火がつく危険がある", 
+        opts: ["オーブンなど高温になる機械の近くに置くと、アルコールに火がつく危険がある", "アルコールが蒸発して中身が美味しくなる", "特に危険はない"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-18.png", 
+        q: "この<ruby>安全<rt>あんぜん</rt></ruby><ruby>標識<rt>ひょうしき</rt></ruby>（イエローサイン）が示している正しい意味はどれですか。", 
+        ans: "やけど注意（高温注意）", 
+        opts: ["立入禁止", "感電注意", "やけど注意（高温注意）"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-19.png", 
+        q: "この<ruby>安全<rt>あんぜん</rt></ruby><ruby>標識<rt>ひょうしき</rt></ruby>が作業場内で禁止している行動は何ですか。", 
+        ans: "走ること（走行禁止）", 
+        opts: ["歩くこと", "走ること（走行禁止）", "物を持って移動すること"] 
+    },
+    { 
+        type: "praktik", 
+        img_src: "ilustrasi-soal-praktik-20.png", 
+        q: "この<ruby>安全<rt>あんぜん</rt></ruby><ruby>標識<rt>ひょうしき</rt></ruby>が警告している、機械作業時のリスクは何ですか。", 
+        ans: "はさまれ・巻き込まれ注意", 
+        opts: ["はさまれ・巻き込まれ注意", "頭上注意", "足元注意"] 
     }
 ];
 
@@ -487,10 +738,19 @@ function startExamMode() {
     document.getElementById("review-container").classList.add("hidden");
     document.getElementById("app-container").classList.remove("hidden");
     
-    let teoriSoal = shuffle(examDataset.filter(d => d.type === "teori"));
-    let praktikSoal = shuffle(examDataset.filter(d => d.type === "praktik"));
+    // 1. Ambil semua soal berdasarkan tipenya, lalu acak masing-masing kelompoknya
+    let semuaTeori = shuffle([...examDataset.filter(d => d.type === "teori")]);
+    let semuaPraktik = shuffle([...examDataset.filter(d => d.type === "praktik")]);
     
-    activeQuizList = teoriSoal.concat(praktikSoal); 
+    // 2. Batasi jumlahnya: Ambil 30 teori pertama dan 10 praktik pertama hasil acakan
+    let teoriTerpilih = semuaTeori.slice(0, 30);
+    let praktikTerpilih = semuaPraktik.slice(0, 10);
+    
+    // 3. Gabungkan menjadi total 40 soal untuk ujian
+    activeQuizList = teoriTerpilih.concat(praktikTerpilih); 
+    
+    // Add (//) to turn off shuffle mode:
+    //activeQuizList = shuffle(activeQuizList);
     
     startTimer();
     showExamQuestion();
