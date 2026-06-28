@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotoba & Simulasi SSW Pengolahan Makanan</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-100 font-sans min-h-screen flex flex-col items-center p-4 selection:bg-blue-200">
+
+    <div id="main-menu" class="w-full max-w-md my-auto flex flex-col gap-6 text-center">
+        <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-200">
+            <h1 class="text-2xl font-bold text-slate-800">SSW Pengolahan Makanan</h1>
+            <p class="text-sm text-slate-500 mt-1">Latihan menghafal Kotoba & Simulasi Ujian CBT</p>
+        </div>
+        <div class="flex flex-col gap-3">
+            <button onclick="startFlashcardMode()" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow transition duration-200">
+                🎴 Menu 1: Flashcard (40 Kotoba Pilihan)
+            </button>
+            <button onclick="startExamMode()" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow transition duration-200">
+                📝 Menu 2: Simulasi Ujian (40 Soal CBT)
+            </button>
+        </div>
+    </div>
+
+    <main id="app-container" class="w-full max-w-md bg-slate-50 p-4 rounded-3xl shadow-xl border border-slate-200 my-auto flex flex-col gap-4 hidden">
+        <div class="flex justify-between items-center bg-white py-2.5 px-4 rounded-2xl shadow-sm border border-slate-100">
+            <button onclick="backToMenu()" class="text-xs font-bold text-slate-500 hover:text-slate-800 transition">
+                ← Menu
+            </button>
+            <span id="exam-timer" class="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200 hidden">
+                ⏱️ Sisa Waktu: 70:00
+            </span>
+            <div id="live-counter" class="flex gap-3 text-xs font-bold text-slate-600 hidden">
+                <span class="text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
+                    ✅ <span id="count-correct">0</span>
+                </span>
+                <span class="text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md border border-rose-200">
+                    ❌ <span id="count-wrong">0</span>
+                </span>
+            </div>
+            <span id="progress-text" class="text-xs font-bold bg-slate-100 text-slate-600 px-3 py-1 rounded-full">
+                0/0
+            </span>
+        </div>
+
+        <div class="flex justify-end items-center gap-2 border-t border-slate-100 pt-2">
+            <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Auto Next:</span>
+            <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="auto-next-toggle" class="sr-only peer" checked>
+                <div class="w-9 h-5 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+            </label>
+        </div>
+
+        <div id="image-container" class="w-full bg-slate-300 rounded-xl h-40 hidden flex items-center justify-center border border-slate-400 relative overflow-hidden">
+            <span id="image-placeholder-text" class="text-xs font-bold text-slate-600 uppercase tracking-wider text-center p-4">Ilustrasi Kasus di Pabrik</span>
+        </div>
+
+        <div id="question-box" class="min-h-36 text-center p-4 bg-white rounded-2xl shadow border border-slate-200 flex flex-col justify-center"></div>
+
+        <div id="feedback" class="text-center h-6 text-base font-semibold"></div>
+
+        <div id="options-container" class="grid grid-cols-1 gap-2"></div>
+
+        <div class="flex justify-end mt-2">
+            <button id="next-btn" class="bg-slate-800 hover:bg-slate-900 text-white text-sm font-semibold py-2.5 px-6 rounded-xl shadow transition hidden">
+                Selanjutnya →
+            </button>
+        </div>
+    </main>
+
+    <div id="review-container" class="w-full max-w-md bg-white p-5 rounded-2xl shadow border border-slate-200 my-auto flex flex-col gap-4 hidden">
+        <div class="text-center border-b border-slate-100 pb-3">
+            <h2 id="review-score-title" class="text-lg font-bold text-slate-800">Hasil Sesi</h2>
+            <div id="review-status" class="text-2xl font-black mt-1">--</div>
+            <p id="review-score-details" class="text-xs text-slate-500 font-medium mt-1">Skor Akhir: --</p>
+        </div>
+        
+        <div class="flex flex-col gap-2 max-h-72 overflow-y-auto pr-1">
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Review Koreksi Jawaban:</p>
+            <div id="review-list-body" class="flex flex-col gap-2"></div>
+        </div>
+
+        <button onclick="backToMenu()" class="w-full py-3 bg-slate-800 hover:bg-slate-900 text-white text-sm font-bold rounded-xl transition duration-150 shadow-sm mt-2">
+            Kembali ke Menu Utama
+        </button>
+    </div>
+
+    <footer class="text-center text-xs text-slate-400 my-4">© 2026 SSW 飲食料品製造業 Simulation by Potatossuki.</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

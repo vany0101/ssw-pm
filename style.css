@@ -1,0 +1,49 @@
+/* style.css */
+
+/* Mengembalikan aliran teks normal khusus untuk area yang memiliki Furigana (Kanji + rt) */
+.ruby-container {
+    display: block !important;
+    line-height: 2.4 !important; /* Memberikan ruang vertikal yang cukup agar furigana tidak menabrak baris di atasnya */
+    text-align: center;
+}
+
+/* Pengaturan elemen Ruby secara global */
+ruby {
+    ruby-position: over;
+    -webkit-ruby-position: over;
+    ruby-align: center;
+}
+
+/* Pengaturan teks pembantu Furigana (rt) */
+rt {
+    font-size: 0.52em !important; /* Ukuran proporsional agar mudah dibaca di layar HP/Desktop */
+    color: #475569 !important;    /* Warna Slate-600 yang kontras namun tetap lembut */
+    letter-spacing: 0.02em;
+    padding-bottom: 0.15em;       /* Jarak halus antara furigana dan kanji di bawahnya */
+    user-select: none;            /* Mencegah furigana ikut terseret saat user menyalin teks arti */
+}
+
+/* ==========================================================================
+   ANIMASI EFFECT FLIP CARD (MENU FLASHCARD)
+   ========================================================================== */
+.flip-card { 
+    perspective: 1000px; 
+}
+
+.flip-card-inner {
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner { 
+    transform: rotateY(180deg); 
+}
+
+.flip-card-front, .flip-card-back { 
+    backface-visibility: hidden; 
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back { 
+    transform: rotateY(180deg); 
+}
