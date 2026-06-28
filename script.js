@@ -39,7 +39,11 @@ const flashcardDataset = [
     { ruby: "<ruby>安全第一<rt>あんぜんだいいち</rt></ruby>", arti: "Utamakan keselamatan", cat: "労働安全" },
     { ruby: "<ruby>ヒヤリハット<rt>ひやりはっと</rt></ruby>", arti: "Near-miss incident", cat: "労働安全" },
     { ruby: "<ruby>非常ボタン<rt>ひじょうぼたん</rt></ruby>", arti: "Tombol darurat", cat: "労働安全" },
-    { ruby: "<ruby>保護具<rt>ほごぐ</rt></ruby>", arti: "Alat Pelindung Diri (APD)", cat: "労働安全" }
+    { ruby: "<ruby>保護具<rt>ほごぐ</rt></ruby>", arti: "Alat Pelindung Diri (APD)", cat: "労働安全" },
+    { ruby: "<ruby>食品<rt>しょくひん</rt></ruby>", arti: "Produk Makanan", cat: "将軍" },
+    { ruby: "<ruby>原材料<rt>げんざいりょう</rt></ruby>", arti: "Bahan Baku", cat: "将軍" },
+
+
 ];
 
 const examDataset = [
@@ -154,7 +158,7 @@ const examDataset = [
     },
     { 
         type: "teori", 
-        q: "アレルギー<ruby>物質<rt>ぶっしつ</rt></ruby>（<ruby>特定原材料<rt>toku tei gen zai ryou</rt></ruby>）の「7<ruby>品目<rt>ひんもく</rt></ruby>」に含まれないものはどれですか。", 
+        q: "アレルギー<ruby>物質<rt>ぶっしつ</rt></ruby>（<ruby>特定原材料<rt>とくていげんざいりょう</rt></ruby>）の「7<ruby>品目<rt>ひんもく</rt></ruby>」に含まれないものはどれですか。", 
         ans: "大豆", 
         opts: ["卵", "小麦", "大豆"] 
     },
@@ -166,7 +170,7 @@ const examDataset = [
     },
     { 
         type: "teori", 
-        q: "<ruby>作業者<rt>さぎょうしゃ</rt></ruby>が<ruby>下痢<rt>げり</rt></ruby>や<ruby>発熱<rt>hatsunetsu</rt></ruby>、<ruby>吐き気<rt>はきけ</rt></ruby>などの<ruby>症状<rt>しょうじょう</rt></ruby>がある場合、最初にするべきことはどれですか。", 
+        q: "<ruby>作業者<rt>さぎょうしゃ</rt></ruby>が<ruby>下痢<rt>げり</rt></ruby>や<ruby>発熱<rt>はつねつ</rt></ruby>、<ruby>吐き気<rt>はきけ</rt></ruby>などの<ruby>症状<rt>しょうじょう</rt></ruby>がある場合、最初にするべきことはどれですか。", 
         ans: "すぐに管理者に報告し、作業に入らない", 
         opts: ["薬を飲んで黙って作業を続ける", "すぐに管理者に報告し、作業に入らない", "同僚にだけ話して休憩を多くもらう"] 
     },
@@ -220,7 +224,7 @@ const examDataset = [
     },
     { 
         type: "teori", 
-        q: "万が一、<ruby>労働災害<rt>ろうどうさいがい</rt></ruby>（ケガ）が<ruby>発生<rt>hatsusei</rt></ruby>してしまった場合、最初に行うべき<ruby>行動<rt>こうどう</rt></ruby>はどれですか。", 
+        q: "万が一、<ruby>労働災害<rt>ろうどうさいがい</rt></ruby>（ケガ）が<ruby>発生<rt>はつせい</rt></ruby>してしまった場合、最初に行うべき<ruby>行動<rt>こうどう</rt></ruby>はどれですか。", 
         ans: "すぐに機械を止め、大声で管理者に報告する", 
         opts: ["怒られるのが怖いので隠す", "すぐに機械を止め、大声で管理者に報告する", "仕事を最後まで終わらせてから病院に行く"] 
     },
@@ -229,23 +233,23 @@ const examDataset = [
     { 
         type: "praktik", 
         img_src: "ilustrasi-soal-praktik-1.png", 
-        q: "このイラストの手洗い方法の問題点はどこですか。", 
+        q: "このイラストの手洗い方法の<ruby>問題点<rt>もんだいてん</rt></ruby>はどこですか。", 
         ans: "ハンドソープ（石けん）を使っていないため、菌が落ちない", 
         opts: ["水が冷たすぎる", "ハンドソープ（石けん）を使っていないため、菌が落ちない", "ペーパータオルを2枚使っている"] 
     },
     { 
         type: "praktik", 
         img_src: "ilustrasi-soal-praktik-2.png", 
-        q: "このイラストの保管方法 of どこが間違っていますか。", 
+        q: "このイラストの<ruby>保管方法<rt>ほかんほうほう</rt></ruby> の どこが<ruby>間違<rt>まちがえ</rt></ruby>っていますか。", 
         ans: "先入れ先出し（FIFO）ができておらず、古い原材料が残ってしまう", 
         opts: ["先入れ先出し（FIFO）ができておらず、古い原材料が残ってしまう", "箱の向きがバラバラである", "天井が高すぎる"] 
     },
     { 
         type: "praktik", 
         img_src: "ilustrasi-soal-praktik-3.png", 
-        q: "イラストの状態でお勧め作業をすると、どのようなリスク（危険）がありますか。", 
-        ans: "指輪や時計に付いた菌が食品に混ざる、または時計が異物混入する danger", 
-        opts: ["手が重くなる危険", "指輪や時計に付いた菌が食品に混ざる、または時計が異物混入する danger", "adonan menjadiが固くなる危険"] 
+        q: "イラストの<ruby>状態<rt>じょうたい</rt></ruby>でお勧め作業をすると、どのようなリスク（危険）がありますか。", 
+        ans: "指輪や時計に付いた菌が食品に混ざる、または時計が異物混入する危険", 
+        opts: ["手が重くなる危険", "指輪や時計に付いた菌が食品に混ざる、または時計が異物混入する危険", "生地が固くなる危険"] 
     },
     { 
         type: "praktik", 
@@ -271,7 +275,7 @@ const examDataset = [
     { 
         type: "praktik", 
         img_src: "ilustrasi-soal-praktik-7.png", 
-        q: "この状態での作業において、最も懸念される労働安全上のリスクは何ですか。", 
+        q: "このruby>状態<rt>じょうたい</rt></ruby>での作業において、最も<ruby>懸念<rt>けねん</rt></ruby>される労働安全上のリスクは何ですか。", 
         ans: "集中力が低下し、機械に手を巻き込まれるなどの大ケガをする危険", 
         opts: ["製品のデザインが変わってしまう危険", "集中力が低下し、機械に手を巻き込まれるなどの大ケガをする危険", "給料が減ってしまう危険"] 
     },
@@ -285,14 +289,14 @@ const examDataset = [
     { 
         type: "praktik", 
         img_src: "ilustrasi-soal-praktik-9.png", 
-        q: "機械の安全カバーを外して作業することについて、正しい説明はどれですか。", 
+        q: "<ruby>機械<rt>きかい</rt></ruby>の安全カバーを外して作業することについて、正しい説明はどれですか。", 
         ans: "絶対にやってはいけない（巻き込まれ事故の最大の原因になる）", 
         opts: ["作業が速くなるなら外しても良い", "絶対にやってはいけない（巻き込まれ事故の最大の原因になる）", "管理者の許可があれば、外したままでずっと作業して良い"] 
     },
     { 
         type: "praktik", 
         img_src: "ilustrasi-soal-praktik-10.png", 
-        q: "このイラストのような状態のままだと、火災や地震などの緊急時にどのような問題が起きますか。", 
+        q: "このイラストのような状態のままだと、火災や地震などの<ruby>緊急<rt>きんきゅう</rt></ruby>時にどのような問題が起きますか。", 
         ans: "避難（ひなん）が遅れ、逃げ遅れて命の危険が生じる", 
         opts: ["荷物が濡れてしまう", "避難（ひなん）が遅れ、逃げ遅れて命の危険が生じる", "泥棒に入られやすくなる"] 
     }
