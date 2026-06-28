@@ -30,6 +30,85 @@ const flashcardDataset = [
     { ruby: "<ruby>賞味期限<rt>しょうみきげん</rt></ruby>", arti: "Best before date", cat: "生産" },
     { ruby: "<ruby>消費期限<rt>しょうひきげん</rt></ruby>", arti: "Expiry date", cat: "生産" },
     { ruby: "<ruby>先入れ先出し<rt>さきいれさきだし</rt></ruby>", arti: "FIFO (First In First Out)", cat: "生産" },
+    { ruby: "<ruby>調理する<rt>ちょうりする</rt></ruby>", arti: "memasak (ada kesan profesional dan pakai teknik tertentu)", cat: "生産" },
+    { ruby: "<ruby>野菜<rt>やさい</rt></ruby>", arti: "sayuran", cat: "生産" },
+    { ruby: "<ruby>果物<rt>くだもの</rt></ruby>", arti: "buah", cat: "生産" },
+    { ruby: "<ruby>お肉<rt>おにく</rt></ruby>", arti: "daging", cat: "生産" },
+    { ruby: "<ruby>お弁当<rt>おべんとう</rt></ruby>", arti: "makanan box", cat: "生産" },
+    { ruby: "<ruby>生鮮食品<rt>せいせんしょくひん</rt></ruby>", arti: "makanan segar (sebutan lain 新鮮食品 / しんせんしょくひん)", cat: "生産" },
+    { ruby: "<ruby>冷凍食品<rt>れいとうしょくひん</rt></ruby>", arti: "makanan beku, makanan frozen", cat: "生産" },
+    { ruby: "<ruby>原材料<rt>げんざいりょう</rt></ruby>", arti: "bahan baku mentah", cat: "生産" },
+    { ruby: "<ruby>生もの<rt>なまもの</rt></ruby>", arti: "makanan mentah", cat: "生産" },
+    { ruby: "<ruby>畜産食料品<rt>ちくさんしょくりょうひん</rt></ruby>", arti: "bahan makanan hewani (telur, susu, dll)", cat: "生産" },
+    { ruby: "<ruby>水産食料品<rt>すいさんしょくりょうひん</rt></ruby>", arti: "makanan berbahan ikan-ikanan", cat: "生産" },
+    { ruby: "<ruby>野菜缶詰<rt>やさいかんづめ</rt></ruby>", arti: "sayuran kaleng", cat: "生産" },
+    { ruby: "<ruby>果実缶詰<rt>かじつかんづめ</rt></ruby>", arti: "buah-buahan kaleng", cat: "生産" },
+    { ruby: "<ruby>農産保存食料品<rt>のうさんほぜんしょくりょうひん</rt></ruby>", arti: "buah dan sayuran yang diawetkan", cat: "生産" },
+    { ruby: "<ruby>調味料<rt>ちょうみりょう</rt></ruby>", arti: "bumbu", cat: "生産" },
+    { ruby: "<ruby>糖類<rt>とうるい</rt></ruby>", arti: "gula (sebutan zat, untuk gula pasir disebut 砂糖 / さとう)", cat: "生産" },
+    { ruby: "<ruby>精穀<rt>せいこく</rt></ruby>", arti: "biji-bijian", cat: "生産" },
+    { ruby: "<ruby>穀物<rt>こくもつ</rt></ruby>", arti: "gandum", cat: "生産" },
+    { ruby: "<ruby>製粉<rt>せいふん</rt></ruby>", arti: "pembuatan tepung dari biji-bijian", cat: "生産" },
+    { ruby: "<ruby>パン<rt>ぱん</rt></ruby>", arti: "roti", cat: "生産" },
+    { ruby: "<ruby>菓子<rt>かし</rt></ruby>", arti: "kue, cemilan", cat: "生産" },
+    { ruby: "<ruby>動植物油脂<rt>どうぶつゆし</rt></ruby>", arti: "minyak hewani", cat: "生産" },
+    { ruby: "<ruby>豚油脂<rt>ぶたゆし</rt></ruby>", arti: "minyak babi", cat: "生産" },
+    { ruby: "<ruby>植物油脂<rt>しょくぶつゆし</rt></ruby>", arti: "minyak nabati", cat: "生産" },
+    { ruby: "<ruby>仕分け<rt>しwake</rt></ruby>", arti: "proses memilah bahan", cat: "生産" },
+    { ruby: "<ruby>包装<rt>ほうそう</rt></ruby>", arti: "pengepakan, pengemasan", cat: "生産" },
+    { ruby: "<ruby>食材<rt>しょくざい</rt></ruby>", arti: "bahan makanan", cat: "生産" },
+    { ruby: "<ruby>加工する<rt>かこうする</rt></ruby>", arti: "mengolah", cat: "生産" },
+    { ruby: "<ruby>食材を加工する<rt>しょくざいをかこうする</rt></ruby>", arti: "mengolah bahan makanan", cat: "生産" },
+    { ruby: "<ruby>魚の捌き方<rt>さかなのさばきかた</rt></ruby>", arti: "cara memotong ikan", cat: "生産" },
+    { ruby: "<ruby>お肉の切り分け<rt>おにくのきりわけ</rt></ruby>", arti: "pemotongan bagian daging", cat: "生産" },
+    { ruby: "<ruby>ベルトコンベアー<rt>べるとこんべあー</rt></ruby>", arti: "belt conveyor, mesin pembawa material", cat: "生産" },
+    { ruby: "<ruby>ベルトコンベアーに乗せられて運ばれる<rt>べるとこんべあーにのせられてはこばれる</rt></ruby>", arti: "ditaruh dan diangkut belt conveyor", cat: "生産" },
+    { ruby: "<ruby>ツヤ出し用<rt>つやだしよう</rt></ruby>", arti: "cairan pengkilap roti", cat: "生産" },
+    { ruby: "<ruby>パン生地<rt>ぱんきじ</rt></ruby>", arti: "adonan roti", cat: "生産" },
+    { ruby: "<ruby>塗る<rt>ぬる</rt></ruby>", arti: "mengoles", cat: "生産" },
+    { ruby: "<ruby>パン生地にツヤ出し用の卵をハケで塗ったりします<rt>ぱんきじにつやだしようのたまごをはけでぬったりします</rt></ruby>", arti: "pan kiji ni tsuyadashiyou no tamago o hake de nuttari shimasu", cat: "生産" },
+    { ruby: "<ruby>パウチ<rt>ぱうち</rt></ruby>", arti: "kantung", cat: "生産" },
+    { ruby: "<ruby>パウチごとに分けられる<rt>ぱうちごとにわけられる</rt></ruby>", arti: "dipisah/dibagi tiap kemasan", cat: "生産" },
+    { ruby: "<ruby>総菜<rt>そうざい</rt></ruby>", arti: "makanan jadi, makanan masak, makanan yang bisa langsung dimakan, lauk-pauk", cat: "生産" },
+    { ruby: "<ruby>総菜を詰める<rt>そうざいをつめる</rt></ruby>", arti: "menaruh (mengepak ke dalam kemasan) makanan jadi", cat: "生産" },
+    { ruby: "<ruby>シール<rt>しーる</rt></ruby>", arti: "label", cat: "生産" },
+    { ruby: "<ruby>袋<rt>ふくろ</rt></ruby>", arti: "kantung", cat: "生産" },
+    { ruby: "<ruby>パッケージや袋に表示シールを貼る<rt>ぱっけーじやふくろにひょうじしーるをはる</rt></ruby>", arti: "menempelkan label pada kemasan atau kantung", cat: "生産" },
+    { ruby: "<ruby>蓋<rt>ふた</rt></ruby>", arti: "tutup kemasan (tutup botol, dll)", cat: "生産" },
+    { ruby: "<ruby>蓋をする作業<rt>ふたをするさぎょう</rt></ruby>", arti: "pekerjaan memasang tutup kemasan", cat: "生産" },
+    { ruby: "<ruby>腐敗<rt>ふはい</rt></ruby>", arti: "busuk", cat: "衛生" },
+    { ruby: "<ruby>食品の腐敗<rt>しょくひんのふはい</rt></ruby>", arti: "makanan busuk", cat: "衛生" },
+    { ruby: "<ruby>保存する<rt>ほぞんする</rt></ruby>", arti: "menyimpan", cat: "衛生" },
+    { ruby: "<ruby>温室<rt>おんしつ</rt></ruby>", arti: "suhu ruangan", cat: "衛生" },
+    { ruby: "<ruby>室温保存<rt>しつおんほぜん</rt></ruby>", arti: "penyimpanan di suhu ruangan", cat: "衛生" },
+    { ruby: "<ruby>日勤<rt>にっきん</rt></ruby>", arti: "shift siang", cat: "生産" },
+    { ruby: "<ruby>夜勤<rt>やきん</rt></ruby>", arti: "shift malam", cat: "生産" },
+    { ruby: "<ruby>下処理する<rt>したしょりする</rt></ruby>", arti: "menyiapkan", cat: "生産" },
+    { ruby: "<ruby>材料を下処理する<rt>ざいりょうをしたしょりする</rt></ruby>", arti: "menyiapkan bahan", cat: "生産" },
+    { ruby: "<ruby>盛りつける<rt>もりつける</rt></ruby>", arti: "menghias atau menata makanan jadi", cat: "生産" },
+    { ruby: "<ruby>異物<rt>いぶつ</rt></ruby>", arti: "benda asing", cat: "衛生" },
+    { ruby: "<ruby>混入<rt>こんにゅう</rt></ruby>", arti: "kontaminasi", cat: "衛生" },
+    { ruby: "<ruby>異物混入が起こらないように<rt>いぶつこんにゅうがおこらないように</rt></ruby>", arti: "usahakan tidak terjadi kontaminasi benda asing", cat: "衛生" },
+    { ruby: "<ruby>賞味期限<rt>しょうみきげん</rt></ruby>", arti: "tanggal kadaluarsa konsumsi", cat: "衛生" },
+    { ruby: "<ruby>衛生面<rt>えいせいめん</rt></ruby>", arti: "higienis, sisi kebersihan", cat: "衛生" },
+    { ruby: "<ruby>消毒<rt>しょうどく</rt></ruby>", arti: "disinfeksi, menyemprotkan tangan dengan alkohol pembunuh kuman", cat: "衛生" },
+    { ruby: "<ruby>着替え<rt>きがえ</rt></ruby>", arti: "ganti baju (dengan baju khusus kerja)", cat: "衛生" },
+    { ruby: "<ruby>毛髪やほこりを取り除く<rt>もうはつやほこりをとりのぞく</rt></ruby>", arti: "menghilangkan rambut dan debu", cat: "衛生" },
+    { ruby: "<ruby>パン工場<rt>ぱんこうじょう</rt></ruby>", arti: "pabrik roti", cat: "生産" },
+    { ruby: "<ruby>弁当工場<rt>べんとうこうじょう</rt></ruby>", arti: "pabrik bentou (makanan box)", cat: "生産" },
+    { ruby: "<ruby>カップ麺の製造工場<rt>かっぷめんのせいぞうこうじょう</rt></ruby>", arti: "pabrik pembuatan mie", cat: "生産" },
+    { ruby: "<ruby>食品製造工場<rt>しょくひんせいぞうこうじょう</rt></ruby>", arti: "pabrik pengolahan makanan", cat: "生産" },
+    { ruby: "<ruby>冷凍食品工場<rt>れいとうしょくひんこうじょう</rt></ruby>", arti: "pabrik pengolahan makanan beku", cat: "生産" },
+    { ruby: "<ruby>食品包装<rt>しょくひんほうそう</rt></ruby>", arti: "kemasan produk makanan", cat: "生産" },
+    { ruby: "<ruby>梱包<rt>こんぽう</rt></ruby>", arti: "packing, pengemasan", cat: "生産" },
+    { ruby: "<ruby>出荷<rt>しゅっか</rt></ruby>", arti: "pengiriman", cat: "生産" },
+    { ruby: "<ruby>マイナス15度以下<rt>まいなすじゅうごどいか</rt></ruby>", arti: "di bawah 15 derajat celcius", cat: "生産" },
+    { ruby: "<ruby>飲料メーカー工場<rt>いんりょうめーかーこうじょう</rt></ruby>", arti: "pabrik pembuatan minuman kemasan", cat: "生産" },
+    { ruby: "<ruby>殺菌<rt>さっきん</rt></ruby>", arti: "sterilisasi", cat: "衛生" },
+    { ruby: "<ruby>機械<rt>きかい</rt></ruby>", arti: "mesin", cat: "生産" },
+    { ruby: "<ruby>操作<rt>そうさ</rt></ruby>", arti: "pengoperasian", cat: "生産" },
+    { ruby: "<ruby>検品<rt>けんぴん</rt></ruby>", arti: "inspeksi kualitas", cat: "生産" },
+    { ruby: "<ruby>機械の操作や検品<rt>きかいのそうさやけんぴん</rt></ruby>", arti: "pengoperasian dan pengecekan mesin", cat: "生産" },
     { ruby: "<ruby>整理<rt>せいり</rt></ruby>", arti: "Ringkas (Memilah barang yang diperlukan & tidak)", cat: "5S" },
     { ruby: "<ruby>整頓<rt>せいとん</rt></ruby>", arti: "Rapi (Menata barang pada tempatnya)", cat: "5S" },
     { ruby: "<ruby>清掃<rt>せいそう</rt></ruby>", arti: "Resik (Membersihkan tempat kerja)", cat: "5S" },
@@ -42,8 +121,8 @@ const flashcardDataset = [
     { ruby: "<ruby>保護具<rt>ほごぐ</rt></ruby>", arti: "Alat Pelindung Diri (APD)", cat: "労働安全" },
     { ruby: "<ruby>食品<rt>しょくひん</rt></ruby>", arti: "Produk Makanan", cat: "将軍" },
     { ruby: "<ruby>原材料<rt>げんざいりょう</rt></ruby>", arti: "Bahan Baku", cat: "将軍" },
-
-
+    { ruby: "<ruby>野菜<rt>やさい</rt></ruby>", arti: "Sayuran", cat: "Sayuran" },
+    { ruby: "<ruby>魚<rt>さかな</rt></ruby>", arti: "Ikan", cat: "将軍" },
 ];
 
 const examDataset = [
@@ -342,7 +421,11 @@ function startFlashcardMode() {
     document.getElementById("live-counter").classList.remove("hidden");
     updateLiveCounter();
     
-    activeQuizList = shuffle([...flashcardDataset]);
+    // 1. Acak seluruh database kotoba terlebih dahulu
+    let shuffledDb = shuffle([...flashcardDataset]);
+    
+    // 2. Ambil maksimal 50 kotoba saja untuk sesi ini (User akan selalu dapat kombinasi baru)
+    activeQuizList = shuffledDb.slice(0, 50); 
     currentIndex = 0;
     
     document.getElementById("main-menu").classList.add("hidden");
@@ -429,7 +512,6 @@ function startTimer() {
     }, 1000);
 }
 
-// FIX: Pemicu penampil gambar dinamis disempurnakan untuk Tailwind CSS v4
 function showExamQuestion() {
     answered = false;
     document.getElementById("next-btn").classList.add("hidden");
@@ -498,6 +580,7 @@ function checkUserSelection(btnElement, selectedVal, correctVal) {
             userAns: selectedVal,
             correctAns: correctVal
         });
+
     }
 
     if (currentMode === "flashcard") {
