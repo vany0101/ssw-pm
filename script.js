@@ -488,6 +488,39 @@ const examDataset = [
         opts: ["作業のスピードが遅くなるから", "工場の電気が消えてしまうから", "折れた芯や針が製品に入ると、異物混入の原因になるから"] 
     },
 
+    // SESI 1: 4 SOAL TEORI (HITUNG-HITUNGAN)
+
+    {
+        type: "teori", 
+        sub_type: "hitungan",
+        q: "<ruby>濃度<rt>のうどう</rt></ruby>(のうど)5% NaClO<ruby>溶液<rt>ようえき</rt></ruby>(ようえき)があります。100ppmのNaClO溶液を2L作るときに、この溶液(ようえき)と水(みず)はそれぞれ何ml必要(ひつよう)ですか。", 
+        ans: "溶液4ml、水1996ml", 
+        opts: ["溶液4ml、水1996ml", "溶液12ml、水988ml", "溶液5ml、水1995ml"] 
+    },
+
+    {
+        type: "teori",
+        sub_type: "hitungan",
+        q: "<ruby>濃度<rt>のうどう</rt></ruby>(のうど)10% NaClOruby>溶液<rt>ようえき</rt></ruby>(ようえき)があります。200ppmのNaClO溶液を1L作るときに、この溶液(ようえき)と水(みず)はそれぞれ何ml必要(ひつよう)ですか。",
+        ans: "溶液2ml、水998ml",
+        opts: ["溶液4ml、水995ml", "溶液2ml、水996ml", "溶液2ml、水998ml"] 
+    },
+
+    { 
+        type: "teori", 
+        sub_type: "hitungan",
+        q: "<ruby>加熱<rt>かねつ</rt></ruby><ruby>調理<rt>ちょうり</rt></ruby>が<ruby>終わった<rt>おわった</rt></ruby><ruby>食品<rt>しょくひん</rt></ruby>を、13<ruby>時<rt>じ</rt></ruby>00<ruby>分<rt>ふん</rt></ruby>に<ruby>中心<rt>ちゅうしん</rt></ruby><ruby>温度<rt>おんど</rt></ruby>75℃で<ruby>確認<rt>かくにん</rt></ruby>しました。<ruby>微生物<rt>びせいぶつ</rt></ruby>の<ruby>増殖<rt>ぞうしょく</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐための<ruby>正しい<rt>ただしい</rt></ruby><ruby>冷却<rt>れいきゃく</rt></ruby><ruby>基準<rt>きじゅん</rt></ruby>（30<ruby>分間<rt>ぶんかん</rt></ruby><ruby>以内<rt>いない</rt></ruby>に20℃まで<ruby>下<rt>さ</rt></ruby>げる）に<ruby>従<rt>したが</rt></ruby>う<ruby>場合<rt>ばあい</rt></ruby>、13<ruby>時<rt>じ</rt></ruby>30<ruby>分<rt>ふん</rt></ruby>までに<ruby>中心<rt>ちゅうしん</rt></ruby><ruby>温度<rt>おんど</rt></ruby>を<ruby>何<rt>なん</rt></ruby>℃まで<ruby>下<rt>さ</rt></ruby>げる<ruby>必要<rt>ひつよう</rt></ruby>がありますか。", 
+        ans: "20℃以下", 
+        opts: ["20℃以下", "10℃以下", "0℃以下"] 
+    },
+    { 
+        type: "teori", 
+        sub_type: "hitungan",
+        q: "2022<ruby>年<rt>ねん</rt></ruby>の<ruby>食品<rt>しょくひん</rt></ruby><ruby>製造<rt>せいぞう</rt></ruby><ruby>業<rt>ぎょう</rt></ruby>の<ruby>国内<rt>こくない</rt></ruby><ruby>生産<rt>せいさん</rt></ruby><ruby>額<rt>がく</rt></ruby>（38.4<ruby>兆<rt>ちょう</rt></ruby><ruby>円<rt>えん</rt></ruby>）において、「<ruby>そう菜<rt>そうざい</rt></ruby>・すし・<ruby>弁当<rt>べんとう</rt></ruby>」の<ruby>割合<rt>わりあい</rt></ruby>は7%（2.8<ruby>兆<rt>ちょう</rt></ruby><ruby>円<rt>えん</rt></ruby>）です。もし<ruby>工場<rt>こうじょう</rt></ruby>の<ruby>年間<rt>ねんかん</rt></ruby><ruby>売上<rt>うりあげ</rt></ruby>が100<ruby>万円<rt>まんえん</rt></ruby>で、そのうち「お<ruby>弁当<rt>べんとう</rt></ruby>」の<ruby>製造<rt>せいぞう</rt></ruby>がちょうど7%の<ruby>場合<rt>ばあい</rt></ruby>、お<ruby>弁当<rt>べんとう</rt></ruby>の<ruby>売上<rt>うりあげ</rt></ruby>は<ruby>何<rt>なん</rt></ruby><ruby>万円<rt>まんえん</rt></ruby>になりますか。", 
+        ans: "7万円", 
+        opts: ["70万円", "7万円", "0.7万円"] 
+    },
+    
     // SESI 2: 20 SOAL PRAKTIK (DENGAN ILUSTRASI GAMBAR)
 
     { 
@@ -737,20 +770,34 @@ function startExamMode() {
     document.getElementById("main-menu").classList.add("hidden");
     document.getElementById("review-container").classList.add("hidden");
     document.getElementById("app-container").classList.remove("hidden");
+ 
+    // ========================================================
+    // LOGIKA PEMILIHAN SOAL TEORI (TOTAL 30 SOAL (2 hitungan))
+    // ========================================================
+    let semuaTeoriBiasa = examDataset.filter(d => d.type === "teori" && d.sub_type !== "hitungan");
+    let semuaTeoriHitungan = examDataset.filter(d => d.type === "teori" && d.sub_type === "hitungan");
+
+    semuaTeoriBiasa = shuffle([...semuaTeoriBiasa]);
+    semuaTeoriHitungan = shuffle([...semuaTeoriHitungan]);
+
+    let teoriBiasaTerpilih = semuaTeoriBiasa.slice(0, 28);
+    let teoriHitunganTerpilih = semuaTeoriHitungan.slice(0, 2); // Mengambil 2 dari 4 soal hitungan secara acak
+
+    let seksiTeoriFinal = teoriBiasaTerpilih.concat(teoriHitunganTerpilih);
+    seksiTeoriFinal = shuffle(seksiTeoriFinal); // Mengacak posisi soal hitungan di dalam seksi teori
+
+    // ========================================================
+    // LOGIKA PEMILIHAN SOAL PRAKTIK (TOTAL 10 SOAL)
+    // ========================================================
+    let semuaPraktik = examDataset.filter(d => d.type === "praktik");
+    semuaPraktik = shuffle([...semuaPraktik]);
     
-    // 1. Ambil semua soal berdasarkan tipenya, lalu acak masing-masing kelompoknya
-    let semuaTeori = shuffle([...examDataset.filter(d => d.type === "teori")]);
-    let semuaPraktik = shuffle([...examDataset.filter(d => d.type === "praktik")]);
-    
-    // 2. Batasi jumlahnya: Ambil 30 teori pertama dan 10 praktik pertama hasil acakan
-    let teoriTerpilih = semuaTeori.slice(0, 30);
     let praktikTerpilih = semuaPraktik.slice(0, 10);
-    
-    // 3. Gabungkan menjadi total 40 soal untuk ujian
-    activeQuizList = teoriTerpilih.concat(praktikTerpilih); 
-    
-    // Add (//) to turn off shuffle mode:
-    //activeQuizList = shuffle(activeQuizList);
+ 
+    // ========================================================
+    // LOGIKA URUTAN GABUNGAN SEMUA JENIS SOAL
+    // ========================================================
+    activeQuizList = seksiTeoriFinal.concat(praktikTerpilih);    
     
     startTimer();
     showExamQuestion();
@@ -782,7 +829,7 @@ function showExamQuestion() {
 
     const imgContainer = document.getElementById("image-container");
     if (item.type === "praktik") {
-        // Menggunakan kombinasi remove/add yang aman serta mengganti kelas hidden menjadi flex secara eksplisit
+
         imgContainer.classList.remove("hidden");
         imgContainer.classList.add("flex"); 
         imgContainer.innerHTML = `<img src="${item.img_src}" alt="Ilustrasi Soal" class="h-full w-auto object-contain p-2 relative z-10">`;
